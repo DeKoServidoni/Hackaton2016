@@ -12,8 +12,8 @@ import UIKit
 class CustomCell: UITableViewCell {
     
     @IBOutlet weak var listName: UILabel!
-    @IBOutlet weak var listSponsor: UILabel!
     @IBOutlet weak var cellBackground: UIImageView!
+    @IBOutlet weak var sponsor: UIView!
 }
 
 extension UILabel {

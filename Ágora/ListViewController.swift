@@ -48,11 +48,9 @@ final class ListViewController : UITableViewController {
                 imgList.append(img as! String)
             }
         }
-        
-        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0)
     }
     
-    //MARK: Collection delegates
+    //MARK: Table view delegates
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -66,11 +64,13 @@ final class ListViewController : UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(kReuseIdentifier, forIndexPath: indexPath) as! CustomCell
         
         cell.listName.setTitle(lists[indexPath.row].title)
-        cell.listSponsor.hidden = !lists[indexPath.row].sponsor
+        cell.sponsor.hidden = !lists[indexPath.row].sponsor
         cell.cellBackground.image = UIImage(named: imgList[indexPath.row])
         
-        //cell.cellBackground.alpha = 0.7
-        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //TODO: Implement action functionalities
     }
 }
