@@ -9,15 +9,16 @@
 import Foundation
 import UIKit
 
-class ListViewController : UICollectionViewController {
+final class ListViewController : UITableViewController {
     
     //MARK: Constants
     
-    private let kReuseIdentifier = "CollectionItem"
+    private let kReuseIdentifier = "CellIdentifier"
 
     //MARK: Variables
     
     private var lists = [List]()
+    private var imgList = [String]()
         
     //MARK: Lifecycle
     
@@ -27,10 +28,14 @@ class ListViewController : UICollectionViewController {
         // loading the pre defined lists from pList file
         
         var preLists: NSArray?
+        var preImg: NSArray?
         let path = NSBundle.mainBundle().pathForResource("lists", ofType: "plist")
+        let imgPath = NSBundle.mainBundle().pathForResource("backgrouds", ofType: "plist")
         
-        if path != nil {
+        if path != nil && imgPath != nil {
             preLists = NSArray(contentsOfFile: path!)
+            preImg = NSArray(contentsOfFile: imgPath!)
+            
         }
         
         if preLists != nil {
@@ -38,22 +43,34 @@ class ListViewController : UICollectionViewController {
                 let sponsor = (item as! String == "Danone" || item as! String == "Olímpica Rio2016")
                 lists.append(List(title: item as! String, sponsor: sponsor))
             }
+            
+            for img in preImg! {
+                imgList.append(img as! String)
+            }
         }
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0)
     }
     
     //MARK: Collection delegates
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lists.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kReuseIdentifier, forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.blueColor()
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(kReuseIdentifier, forIndexPath: indexPath) as! CustomCell
+        
+        cell.listName.setTitle(lists[indexPath.row].title)
+        cell.listSponsorIcon.hidden = !lists[indexPath.row].sponsor
+        cell.cellBackground.image = UIImage(named: imgList[indexPath.row])
+        
+        //cell.cellBackground.alpha = 0.7
+        
         return cell
     }
 }

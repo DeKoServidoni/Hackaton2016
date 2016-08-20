@@ -11,8 +11,8 @@
 		0E3CA39F1D6883EA00CCB8C1 /* MyListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CA39E1D6883EA00CCB8C1 /* MyListsViewController.swift */; };
 		0E3CA3A11D6887C000CCB8C1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CA3A01D6887C000CCB8C1 /* List.swift */; };
 		0E3CA3A31D688D0100CCB8C1 /* lists.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3CA3A21D688D0100CCB8C1 /* lists.plist */; };
-		0E3CA3A61D6892E700CCB8C1 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E3CA3A51D6892E700CCB8C1 /* ListCell.xib */; };
-		0E3CA3A81D68933800CCB8C1 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CA3A71D68933800CCB8C1 /* ListCell.swift */; };
+		0E3CA3A81D68933800CCB8C1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CA3A71D68933800CCB8C1 /* CustomCell.swift */; };
+		0E3CA3AB1D68A0CC00CCB8C1 /* backgrouds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3CA3AA1D68A0CC00CCB8C1 /* backgrouds.plist */; };
 		0ECE9D7B1D6877E60094CC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE9D7A1D6877E60094CC4D /* AppDelegate.swift */; };
 		0ECE9D801D6877E60094CC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE9D7E1D6877E60094CC4D /* Main.storyboard */; };
 		0ECE9D821D6877E60094CC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE9D811D6877E60094CC4D /* Assets.xcassets */; };
@@ -24,8 +24,8 @@
 		0E3CA39E1D6883EA00CCB8C1 /* MyListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListsViewController.swift; sourceTree = "<group>"; };
 		0E3CA3A01D6887C000CCB8C1 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		0E3CA3A21D688D0100CCB8C1 /* lists.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lists.plist; sourceTree = "<group>"; };
-		0E3CA3A51D6892E700CCB8C1 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
-		0E3CA3A71D68933800CCB8C1 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		0E3CA3A71D68933800CCB8C1 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		0E3CA3AA1D68A0CC00CCB8C1 /* backgrouds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = backgrouds.plist; sourceTree = "<group>"; };
 		0ECE9D771D6877E50094CC4D /* Ágora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ágora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ECE9D7A1D6877E60094CC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ECE9D7F1D6877E60094CC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,7 +67,6 @@
 			children = (
 				0ECE9D7E1D6877E60094CC4D /* Main.storyboard */,
 				0ECE9D831D6877E60094CC4D /* LaunchScreen.storyboard */,
-				0E3CA3A51D6892E700CCB8C1 /* ListCell.xib */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -75,7 +74,7 @@
 		0E3CA3A91D6893FE00CCB8C1 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				0E3CA3A71D68933800CCB8C1 /* ListCell.swift */,
+				0E3CA3A71D68933800CCB8C1 /* CustomCell.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -107,6 +106,7 @@
 				0ECE9D811D6877E60094CC4D /* Assets.xcassets */,
 				0ECE9D861D6877E60094CC4D /* Info.plist */,
 				0E3CA3A21D688D0100CCB8C1 /* lists.plist */,
+				0E3CA3AA1D68A0CC00CCB8C1 /* backgrouds.plist */,
 			);
 			path = "Ágora";
 			sourceTree = "<group>";
@@ -170,11 +170,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E3CA3AB1D68A0CC00CCB8C1 /* backgrouds.plist in Resources */,
 				0E3CA3A31D688D0100CCB8C1 /* lists.plist in Resources */,
 				0ECE9D851D6877E60094CC4D /* LaunchScreen.storyboard in Resources */,
 				0ECE9D821D6877E60094CC4D /* Assets.xcassets in Resources */,
 				0ECE9D801D6877E60094CC4D /* Main.storyboard in Resources */,
-				0E3CA3A61D6892E700CCB8C1 /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +188,7 @@
 				0ECE9D7B1D6877E60094CC4D /* AppDelegate.swift in Sources */,
 				0E3CA3A11D6887C000CCB8C1 /* List.swift in Sources */,
 				0E3CA39F1D6883EA00CCB8C1 /* MyListsViewController.swift in Sources */,
-				0E3CA3A81D68933800CCB8C1 /* ListCell.swift in Sources */,
+				0E3CA3A81D68933800CCB8C1 /* CustomCell.swift in Sources */,
 				0E3CA39D1D68839600CCB8C1 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
