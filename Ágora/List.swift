@@ -12,10 +12,11 @@ struct List {
     
     let title: String
     let sponsor: Bool
+    let products: [Product]
     
-    init(title newTitle:String, sponsor isSponsor: Bool) {
-        title = newTitle;
-        sponsor = isSponsor;
+    init(title newTitle:String, sponsor isSponsor: Bool, products newProducts:[Product]) {
+        title = newTitle
+        sponsor = isSponsor
+        products = newProducts
     }
-    
 }

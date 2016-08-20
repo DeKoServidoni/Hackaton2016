@@ -40,8 +40,9 @@ final class ListViewController : UITableViewController {
         
         if preLists != nil {
             for item in preLists! {
-                let sponsor = (item as! String == "Danone" || item as! String == "Olimpíadas Rio2016")
-                lists.append(List(title: item as! String, sponsor: sponsor))
+                lists.append(List(title: item as! String,
+                    sponsor: (item as! String == "Danone" || item as! String == "Olimpíadas Rio2016"),
+                    products: getProductForItem(item as! String)))
             }
             
             for img in preImg! {
@@ -65,6 +66,7 @@ final class ListViewController : UITableViewController {
             
             let controller = segue.destinationViewController as! ListDetailViewController
             controller.list = list
+            controller.imagePath = imgList[row]
         }
     }
     
@@ -90,5 +92,52 @@ final class ListViewController : UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("goListDetailSegue", sender: indexPath);
+    }
+    
+    //MARK: Private functions
+    
+    private func getProductForItem(item: String) -> [Product] {
+        var products:[Product] = []
+        
+        switch item {
+            
+        case "Vai Monstro":
+            products = ProductStore.getVaiMonstroProducts()
+            break
+            
+        case "Festa no Apê":
+            products = ProductStore.getFestaNoApProducts()
+            break
+            
+        case "Danone":
+            products = ProductStore.getDanoneProducts()
+            break
+            
+        case "Morando Só":
+            products = ProductStore.getMorandoSozinhoProducts()
+            break
+            
+        case "Cura Ressaca":
+            products = ProductStore.getCuraResacaProducts()
+            break
+            
+        case "Olimpíadas Rio2016":
+            products = ProductStore.getOlimpicaProducts()
+            break
+            
+        case "Vegano":
+            products = ProductStore.getVeganoProducts()
+            break
+            
+        case "Romântica":
+            products = ProductStore.getRomanticaProducts()
+            break
+            
+        default:
+            // do nothing
+            break
+        }
+    
+        return products
     }
 }

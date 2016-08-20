@@ -9,18 +9,41 @@
 import Foundation
 import UIKit
 
-class ListDetailViewController: UIViewController {
+class ListDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var list: List?
+    var imagePath: String?
+    
+    @IBOutlet weak var listImage: UIImageView!
+    @IBOutlet weak var listTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = list?.title
+        
+        listImage.image = UIImage(named: imagePath!)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-        // show the navigation bar in the main screen
+        // hide the navigation bar in the main screen
         self.navigationController?.navigationBar.hidden = false
+    }
+    
+    //MARK: Table delegate
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list!.products.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("productItemId", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = list!.products[indexPath.row].name
+        cell.detailTextLabel?.text = String(format: "%d calorias", list!.products[indexPath.row].calories)
+        
+        return cell
     }
 }
