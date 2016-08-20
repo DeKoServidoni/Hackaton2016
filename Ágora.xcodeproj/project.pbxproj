@@ -190,11 +190,7 @@
 				0ECE9D851D6877E60094CC4D /* LaunchScreen.storyboard in Resources */,
 				0ECE9D821D6877E60094CC4D /* Assets.xcassets in Resources */,
 				0ECE9D801D6877E60094CC4D /* Main.storyboard in Resources */,
-<<<<<<< HEAD
-=======
 				E59561881D68959000BC1ACA /* Searchboard.storyboard in Resources */,
-				0E3CA3A61D6892E700CCB8C1 /* ListCell.xib in Resources */,
->>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
