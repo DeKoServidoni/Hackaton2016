@@ -14,9 +14,9 @@
                         <viewControllerLayoutGuide type="bottom" id="qo3-rM-rc1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="64F-Hr-86T">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.38953500889117487" green="1" blue="0.20650753179689041" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Minhas Listas" id="wnh-9J-tti"/>
                 </viewController>
@@ -29,7 +29,7 @@
             <objects>
                 <tableViewController id="BPx-jm-TVT" userLabel="ListViewController" customClass="ListViewController" customModule="A_gora" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="141" sectionHeaderHeight="28" sectionFooterHeight="28" id="yxL-H1-Qtv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
@@ -95,20 +95,23 @@
                             <outlet property="delegate" destination="BPx-jm-TVT" id="fdJ-xa-cJD"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Listas" id="I1A-rD-VzJ"/>
+                    <tabBarItem key="tabBarItem" title="Listas" image="list_tab_bar" id="I1A-rD-VzJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyS-Zd-7cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1293" y="8"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="ZTx-b7-Npc">
             <objects>
-                <tabBarController id="tjB-8U-3Yg" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="81N-oK-EyH">
+                <tabBarController id="tjB-8U-3Yg" customClass="TabBarViewController" customModule="A_gora" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="81N-oK-EyH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.99533347315436116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.99533347315436116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BPx-jm-TVT" kind="relationship" relationship="viewControllers" id="S3v-NS-H64"/>
@@ -120,4 +123,7 @@
             <point key="canvasLocation" x="560" y="433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list_tab_bar" width="26" height="26"/>
+    </resources>
 </document>
