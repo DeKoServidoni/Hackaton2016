@@ -50,6 +50,24 @@ final class ListViewController : UITableViewController {
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // hide the navigation bar in the main screen
+        self.navigationController?.navigationBar.hidden = true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+       
+        if (segue.identifier == "goListDetailSegue") {
+            let row = (sender as! NSIndexPath).row
+            let list = lists[row] 
+            
+            let controller = segue.destinationViewController as! ListDetailViewController
+            controller.list = list
+        }
+    }
+    
     //MARK: Table view delegates
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -71,6 +89,6 @@ final class ListViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //TODO: Implement action functionalities
+        self.performSegueWithIdentifier("goListDetailSegue", sender: indexPath);
     }
 }
