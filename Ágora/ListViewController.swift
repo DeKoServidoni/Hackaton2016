@@ -40,7 +40,7 @@ final class ListViewController : UITableViewController {
         
         if preLists != nil {
             for item in preLists! {
-                let sponsor = (item as! String == "Danone" || item as! String == "Olímpica Rio2016")
+                let sponsor = (item as! String == "Danone" || item as! String == "Olimpíadas Rio2016")
                 lists.append(List(title: item as! String, sponsor: sponsor))
             }
             
@@ -66,7 +66,7 @@ final class ListViewController : UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(kReuseIdentifier, forIndexPath: indexPath) as! CustomCell
         
         cell.listName.setTitle(lists[indexPath.row].title)
-        cell.listSponsorIcon.hidden = !lists[indexPath.row].sponsor
+        cell.listSponsor.hidden = !lists[indexPath.row].sponsor
         cell.cellBackground.image = UIImage(named: imgList[indexPath.row])
         
         //cell.cellBackground.alpha = 0.7
