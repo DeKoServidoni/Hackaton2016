@@ -28,8 +28,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="i9N-9W-7FF">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tJO-Vk-bJd"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="t69-ty-8l9"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tJO-Vk-bJd">
+                                            <connections>
+                                                <action selector="cancelAction:" destination="1KN-KP-2GJ" id="BHa-S0-uZY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="t69-ty-8l9">
+                                            <connections>
+                                                <action selector="addAction:" destination="1KN-KP-2GJ" id="Xyg-iJ-j5X"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -68,6 +76,8 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="t69-ty-8l9" id="BrM-FQ-vNm"/>
+                        <outlet property="cancelButton" destination="tJO-Vk-bJd" id="4ta-KF-HoN"/>
                         <outlet property="myTableView" destination="g4J-9o-oLh" id="Ffr-6r-zsg"/>
                         <outlet property="searchBar" destination="7ed-hu-ohZ" id="T7O-jF-mSq"/>
                     </connections>

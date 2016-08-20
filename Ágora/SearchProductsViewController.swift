@@ -20,6 +20,12 @@ class SearchProductViewController: UIViewController, UITableViewDelegate, UITabl
         return true
     }
     
+    @IBAction func cancelAction(sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func addAction(sender: UIBarButtonItem) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.allowsMultipleSelection = true
