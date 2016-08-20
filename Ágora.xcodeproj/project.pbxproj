@@ -96,7 +96,7 @@
 				TargetAttributes = {
 					0ECE9D761D6877E50094CC4D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 2Y2K4BNS5A;
+						DevelopmentTeam = P6593DZ4MT;
 					};
 				};
 			};
@@ -254,7 +254,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Ágora/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.A-gora";
+				PRODUCT_BUNDLE_IDENTIFIER = hackaton.agora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -268,7 +268,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Ágora/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.A-gora";
+				PRODUCT_BUNDLE_IDENTIFIER = hackaton.agora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -293,6 +293,7 @@
 				0ECE9D8B1D6877E60094CC4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
