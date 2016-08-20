@@ -12,7 +12,7 @@ struct List {
     
     let title: String
     let sponsor: Bool
-    let products: [Product]
+    var products: [Product]
     
     init(title newTitle:String, sponsor isSponsor: Bool, products newProducts:[Product]) {
         title = newTitle

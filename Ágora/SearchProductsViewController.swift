@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SearchDelegate {
+    func itemsSelected(products: [Product])
+}
+
 class SearchProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -15,15 +19,24 @@ class SearchProductViewController: UIViewController, UITableViewDelegate, UITabl
     
     var initialList = ProductStore.getAllProducts()
     var list = ProductStore.getAllProducts()
+    var delegate: SearchDelegate?
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
     @IBAction func cancelAction(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func addAction(sender: UIBarButtonItem) {
+        if delegate != nil {
+            let coisas = initialList.filter({ (p) -> Bool in
+                return p.checked
+            })
+            delegate?.itemsSelected(coisas)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {

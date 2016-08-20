@@ -13,7 +13,7 @@ struct Product {
     let name: String
     let calories: Int
     var type: String?
-    var checked = false
+var checked = false
     
     init(name newName: String, calories newCalories: Int, type newType: String) {
         name = newName

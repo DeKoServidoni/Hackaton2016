@@ -45,7 +45,7 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6ec-CR-Ej4">
                                 <rect key="frame" x="0.0" y="189" width="600" height="298"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.63286637931034484" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="productItemId" textLabel="eys-be-aTd" detailTextLabel="R1T-yF-HjB" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="uM1-SF-oln">
                                         <rect key="frame" x="0.0" y="28" width="600" height="64"/>
@@ -58,19 +58,17 @@
                                                     <rect key="frame" x="15" y="16" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R1T-yF-HjB">
                                                     <rect key="frame" x="15" y="35.5" width="30.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60207435344827598" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -79,7 +77,6 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dgA-XO-j1f" firstAttribute="top" secondItem="6ec-CR-Ej4" secondAttribute="bottom" id="2IU-Hi-vah"/>
                             <constraint firstAttribute="trailing" secondItem="6ec-CR-Ej4" secondAttribute="trailing" id="JPq-GW-5qk"/>
@@ -150,7 +147,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="P72-Ba-vDS">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="MEq-LA-G7Q"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MEq-LA-G7Q">
+                            <connections>
+                                <action selector="addItemAction:" destination="PnY-G3-DRM" id="UoN-Z2-Bzd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>

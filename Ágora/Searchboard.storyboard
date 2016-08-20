@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1KN-KP-2GJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1KN-KP-2GJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Search Product View Controller-->
         <scene sceneID="2VR-V7-xr6">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="1KN-KP-2GJ" customClass="SearchProductViewController" customModule="A_gora" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1KN-KP-2GJ" customClass="SearchProductViewController" customModule="A_gora" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Egi-So-1UK"/>
                         <viewControllerLayoutGuide type="bottom" id="dOq-BN-WQz"/>
@@ -49,7 +49,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYL-x6-uVv" id="eJm-uB-DgQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -76,8 +76,6 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="addButton" destination="t69-ty-8l9" id="BrM-FQ-vNm"/>
-                        <outlet property="cancelButton" destination="tJO-Vk-bJd" id="4ta-KF-HoN"/>
                         <outlet property="myTableView" destination="g4J-9o-oLh" id="Ffr-6r-zsg"/>
                         <outlet property="searchBar" destination="7ed-hu-ohZ" id="T7O-jF-mSq"/>
                     </connections>
