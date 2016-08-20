@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1KN-KP-2GJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Search Product View Controller-->
+        <scene sceneID="2VR-V7-xr6">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="1KN-KP-2GJ" customClass="SearchProductViewController" customModule="A_gora" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Egi-So-1UK"/>
+                        <viewControllerLayoutGuide type="bottom" id="dOq-BN-WQz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YLY-Im-w02">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g4J-9o-oLh">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="50" id="KYL-x6-uVv">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYL-x6-uVv" id="eJm-uB-DgQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1KN-KP-2GJ" id="gOZ-9O-YZw"/>
+                                    <outlet property="delegate" destination="1KN-KP-2GJ" id="Km6-aR-KgO"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-hu-ohZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1KN-KP-2GJ" id="4IJ-5r-6Vs"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7ed-hu-ohZ" firstAttribute="top" secondItem="Egi-So-1UK" secondAttribute="bottom" id="3ef-3Y-GfW"/>
+                            <constraint firstItem="g4J-9o-oLh" firstAttribute="leading" secondItem="YLY-Im-w02" secondAttribute="leading" id="4Rk-Tl-Ogt"/>
+                            <constraint firstAttribute="trailing" secondItem="g4J-9o-oLh" secondAttribute="trailing" id="6s9-hU-eVD"/>
+                            <constraint firstItem="7ed-hu-ohZ" firstAttribute="leading" secondItem="g4J-9o-oLh" secondAttribute="leading" id="A4g-IU-TMw"/>
+                            <constraint firstItem="g4J-9o-oLh" firstAttribute="top" secondItem="7ed-hu-ohZ" secondAttribute="bottom" id="FHU-TW-hGm"/>
+                            <constraint firstItem="dOq-BN-WQz" firstAttribute="top" secondItem="g4J-9o-oLh" secondAttribute="bottom" id="kOC-8x-xot"/>
+                            <constraint firstItem="7ed-hu-ohZ" firstAttribute="trailing" secondItem="g4J-9o-oLh" secondAttribute="trailing" id="lRE-9M-MQ2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTableView" destination="g4J-9o-oLh" id="Ffr-6r-zsg"/>
+                        <outlet property="searchBar" destination="7ed-hu-ohZ" id="T7O-jF-mSq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LGa-6c-5Tx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592" y="-444"/>
+        </scene>
+    </scenes>
+</document>

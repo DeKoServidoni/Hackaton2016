@@ -14,6 +14,8 @@
 		0ECE9D851D6877E60094CC4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE9D831D6877E60094CC4D /* LaunchScreen.storyboard */; };
 		E59561841D6881E500BC1ACA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59561831D6881E500BC1ACA /* Product.swift */; };
 		E59561861D6884F000BC1ACA /* ProductStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59561851D6884F000BC1ACA /* ProductStore.swift */; };
+		E59561881D68959000BC1ACA /* Searchboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59561871D68959000BC1ACA /* Searchboard.storyboard */; };
+		E595618A1D68970B00BC1ACA /* SearchProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59561891D68970B00BC1ACA /* SearchProductsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0ECE9D861D6877E60094CC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E59561831D6881E500BC1ACA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		E59561851D6884F000BC1ACA /* ProductStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductStore.swift; sourceTree = "<group>"; };
+		E59561871D68959000BC1ACA /* Searchboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Searchboard.storyboard; sourceTree = "<group>"; };
+		E59561891D68970B00BC1ACA /* SearchProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProductsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				0ECE9D7C1D6877E60094CC4D /* ViewController.swift */,
+				E59561891D68970B00BC1ACA /* SearchProductsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -82,6 +87,7 @@
 				0ECE9D811D6877E60094CC4D /* Assets.xcassets */,
 				0ECE9D831D6877E60094CC4D /* LaunchScreen.storyboard */,
 				0ECE9D861D6877E60094CC4D /* Info.plist */,
+				E59561871D68959000BC1ACA /* Searchboard.storyboard */,
 			);
 			path = "Ágora";
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				0ECE9D851D6877E60094CC4D /* LaunchScreen.storyboard in Resources */,
 				0ECE9D821D6877E60094CC4D /* Assets.xcassets in Resources */,
 				0ECE9D801D6877E60094CC4D /* Main.storyboard in Resources */,
+				E59561881D68959000BC1ACA /* Searchboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ECE9D7D1D6877E60094CC4D /* ViewController.swift in Sources */,
+				E595618A1D68970B00BC1ACA /* SearchProductsViewController.swift in Sources */,
 				0ECE9D7B1D6877E60094CC4D /* AppDelegate.swift in Sources */,
 				E59561841D6881E500BC1ACA /* Product.swift in Sources */,
 				E59561861D6884F000BC1ACA /* ProductStore.swift in Sources */,
