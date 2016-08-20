@@ -15,6 +15,7 @@
 		0E3CA3AB1D68A0CC00CCB8C1 /* backgrouds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3CA3AA1D68A0CC00CCB8C1 /* backgrouds.plist */; };
 		0E3CA3AD1D68B72000CCB8C1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CA3AC1D68B72000CCB8C1 /* TabBarViewController.swift */; };
 		0EB6381E1D68CB0C0047C54F /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB6381D1D68CB0C0047C54F /* ListDetailViewController.swift */; };
+		0EB638201D68EBB70047C54F /* ListCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB6381F1D68EBB70047C54F /* ListCreateViewController.swift */; };
 		0ECE9D7B1D6877E60094CC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE9D7A1D6877E60094CC4D /* AppDelegate.swift */; };
 		0ECE9D801D6877E60094CC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE9D7E1D6877E60094CC4D /* Main.storyboard */; };
 		0ECE9D821D6877E60094CC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE9D811D6877E60094CC4D /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		0E3CA3AA1D68A0CC00CCB8C1 /* backgrouds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = backgrouds.plist; sourceTree = "<group>"; };
 		0E3CA3AC1D68B72000CCB8C1 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0EB6381D1D68CB0C0047C54F /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		0EB6381F1D68EBB70047C54F /* ListCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCreateViewController.swift; sourceTree = "<group>"; };
 		0ECE9D771D6877E50094CC4D /* Ágora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ágora.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ECE9D7A1D6877E60094CC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ECE9D7F1D6877E60094CC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				0E3CA39E1D6883EA00CCB8C1 /* MyListsViewController.swift */,
 				0E3CA3AC1D68B72000CCB8C1 /* TabBarViewController.swift */,
 				0EB6381D1D68CB0C0047C54F /* ListDetailViewController.swift */,
+				0EB6381F1D68EBB70047C54F /* ListCreateViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				0E3CA39D1D68839600CCB8C1 /* ListViewController.swift in Sources */,
 				E595618D1D68B61300BC1ACA /* Product.swift in Sources */,
 				0EB6381E1D68CB0C0047C54F /* ListDetailViewController.swift in Sources */,
+				0EB638201D68EBB70047C54F /* ListCreateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
