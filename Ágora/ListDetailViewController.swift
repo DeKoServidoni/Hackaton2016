@@ -23,6 +23,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         self.navigationItem.title = list?.title
         
         listImage.image = UIImage(named: imagePath!)
+//        listImage.removeFromSuperview()
     }
     
     override func viewWillAppear(animated: Bool) {

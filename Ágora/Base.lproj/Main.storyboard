@@ -36,8 +36,14 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6ec-CR-Ej4">
-                                <rect key="frame" x="0.0" y="226" width="600" height="325"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TdU-F0-eWb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="0IM-kc-gKK"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6ec-CR-Ej4">
+                                <rect key="frame" x="0.0" y="189" width="600" height="298"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="productItemId" textLabel="eys-be-aTd" detailTextLabel="R1T-yF-HjB" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="uM1-SF-oln">
@@ -70,25 +76,17 @@
                                     <outlet property="delegate" destination="yqZ-aI-Fa8" id="eWg-Sa-UpN"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdU-F0-eWb">
-                                <rect key="frame" x="0.0" y="64" width="600" height="162"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="fLz-W5-CGt"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="TdU-F0-eWb" secondAttribute="trailing" id="22m-AC-MTp"/>
-                            <constraint firstAttribute="trailing" secondItem="6ec-CR-Ej4" secondAttribute="trailing" id="E2Y-8M-9j3"/>
-                            <constraint firstItem="TdU-F0-eWb" firstAttribute="top" secondItem="PJ9-cd-GYn" secondAttribute="bottom" id="GgN-U3-qpb"/>
-                            <constraint firstItem="6ec-CR-Ej4" firstAttribute="leading" secondItem="FdI-lO-JlS" secondAttribute="leading" id="MML-CC-oZK"/>
-                            <constraint firstItem="6ec-CR-Ej4" firstAttribute="top" secondItem="TdU-F0-eWb" secondAttribute="bottom" id="N8g-aR-E9m"/>
-                            <constraint firstItem="TdU-F0-eWb" firstAttribute="leading" secondItem="FdI-lO-JlS" secondAttribute="leading" id="OxW-rX-vwX"/>
-                            <constraint firstItem="6ec-CR-Ej4" firstAttribute="top" secondItem="TdU-F0-eWb" secondAttribute="bottom" id="Sgn-bz-EgN"/>
-                            <constraint firstItem="6ec-CR-Ej4" firstAttribute="width" secondItem="FdI-lO-JlS" secondAttribute="width" id="cin-9T-YT2"/>
-                            <constraint firstItem="TdU-F0-eWb" firstAttribute="width" secondItem="FdI-lO-JlS" secondAttribute="width" id="pkm-pW-Jv9"/>
-                            <constraint firstItem="dgA-XO-j1f" firstAttribute="top" secondItem="6ec-CR-Ej4" secondAttribute="bottom" id="xDh-Jw-DDV"/>
+                            <constraint firstItem="dgA-XO-j1f" firstAttribute="top" secondItem="6ec-CR-Ej4" secondAttribute="bottom" id="2IU-Hi-vah"/>
+                            <constraint firstAttribute="trailing" secondItem="6ec-CR-Ej4" secondAttribute="trailing" id="JPq-GW-5qk"/>
+                            <constraint firstAttribute="trailing" secondItem="TdU-F0-eWb" secondAttribute="trailing" id="PSb-34-xNq"/>
+                            <constraint firstItem="TdU-F0-eWb" firstAttribute="leading" secondItem="FdI-lO-JlS" secondAttribute="leading" id="cJM-N8-cvU"/>
+                            <constraint firstItem="6ec-CR-Ej4" firstAttribute="top" secondItem="PJ9-cd-GYn" secondAttribute="bottom" priority="750" id="j2s-if-kaC"/>
+                            <constraint firstItem="6ec-CR-Ej4" firstAttribute="leading" secondItem="FdI-lO-JlS" secondAttribute="leading" id="oj2-vX-Zpm"/>
+                            <constraint firstItem="TdU-F0-eWb" firstAttribute="top" secondItem="PJ9-cd-GYn" secondAttribute="bottom" id="u6G-us-cMl"/>
+                            <constraint firstItem="6ec-CR-Ej4" firstAttribute="top" secondItem="TdU-F0-eWb" secondAttribute="bottom" constant="2" id="xjl-uV-Cv5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tfK-Lf-PTH"/>
