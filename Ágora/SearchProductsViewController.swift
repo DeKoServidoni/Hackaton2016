@@ -95,7 +95,7 @@ class SearchProductViewController: UIViewController, UITableViewDelegate, UITabl
     
     func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         let searchText = self.searchBar.text! + text
-        if (searchText.isEmpty) {
+        if (searchText.isEmpty || (text.isEmpty) && searchText.characters.count == 1) {
             list = initialList
         } else {
             list = initialList.filter { (Product) -> Bool in

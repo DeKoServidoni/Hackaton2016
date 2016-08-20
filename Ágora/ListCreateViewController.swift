@@ -63,6 +63,8 @@ class ListCreateViewController: UITableViewController, SearchDelegate {
         for item in products {
             list?.products.append(item)
             self.tableView.reloadData()
+            
+            ProductStore.setPersonalList(list!.title, products: list!.products)
         }
     }
 }

@@ -279,4 +279,8 @@ final class ProductStore{
         personalLists[name] = products
     }
     
+    static func getAllPersonalLists() -> [String:[Product]]? {
+        return personalLists
+    }
+    
 }
